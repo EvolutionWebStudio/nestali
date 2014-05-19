@@ -32,7 +32,7 @@ class ProfileController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','create','update'),
+				'actions'=>array('index','create','update','pronadjena'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -169,5 +169,13 @@ class ProfileController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionPronadjena($id)
+	{
+		$model = $this->loadModel($id);
+		$model->is_missing = 0;
+		$model->save();
+		$this->redirect(array('site/index'));
 	}
 }

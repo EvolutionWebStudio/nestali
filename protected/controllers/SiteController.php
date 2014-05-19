@@ -124,6 +124,8 @@ class SiteController extends Controller
 				$profileModel->contact_id = $contactModel->id;
 				$profileModel->is_missing = 1;
 				$profileModel->published_date = date("Y-m-d h:m:s");
+				$profileModel->image = CUploadedFile::getInstance($profileModel,'image');
+				$profileModel->image->saveAs(Yii::app()->basePath . '/img/'.$profileModel->image);
 				if($profileModel->save())
 					$this->redirect(array('index'));
 			}
@@ -154,6 +156,6 @@ class SiteController extends Controller
 
 	public function actionAdmin()
 	{
-		$this->redirect(array('profile/index'));
+		$this->redirect(array('site/login'));
 	}
 }
