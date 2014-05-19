@@ -43,6 +43,7 @@
                         array('label'=>'Pronađeni', 'url'=>array('/site/pronadjeni')),
                         array('label'=>'Nisu pronađeni', 'url'=>array('/site/nisu_pronadjeni')),
                         array('label'=>'Informacije', 'url'=>array('/site/informacije')),
+	                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
                         ),
                 )); ?>
             </div>

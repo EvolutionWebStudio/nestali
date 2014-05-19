@@ -40,7 +40,9 @@ class Profile extends CActiveRecord
 			array('contact_id, city_ptt', 'required'),
 			array('is_missing, contact_id, city_ptt', 'numerical', 'integerOnly'=>true),
 			array('name_surname, last_seen_destination', 'length', 'max'=>120),
-			array('description, image', 'length', 'max'=>255),
+			array('description', 'length', 'max'=>255),
+			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true, 'message'=>Yii::t('common', 'form.field.email')),
+
 			array('published_date, last_seen_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

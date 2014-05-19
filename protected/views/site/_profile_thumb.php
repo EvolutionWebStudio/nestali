@@ -20,6 +20,12 @@
 			<div class="alert alert-warning">
                 <span class="glyphicon glyphicon-exclamation-sign"></span> Nije još pronađen/a
 			</div>
+			<?php if(!Yii::app()->user->isGuest): ?>
+				<div class="alert alert-warning">
+					<?php echo CHtml::link('Pronađen/a',array('profile/pronadjena','id'=>$m->id)); ?>
+				</div>
+			<?php endif; ?>
+
             <small class="article-meta">Nestanak objavljen <?php echo date('d.m.Y, h:m', strtotime($m->published_date)); ?></small>
 		</div>
 	</div>
