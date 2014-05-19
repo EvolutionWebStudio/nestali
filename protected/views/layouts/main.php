@@ -56,7 +56,7 @@
 
     <div class="row">
         <footer class="col-md-12">
-            <p class="copyright text-center">Copyright SoftLab &copy; 2014</p>
+            <p class="copyright text-center">Created by <a href="http://evolution.rs.ba" target="_blank">Evolution Web Studio</a> &copy;2014</p>
         </footer>
     </div>
 </div>
