@@ -4,17 +4,30 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<div class="col-md-12">
+    <h1>Pronađimo nestale!</h1>
+    <p>Sajt nestali.rs napravljen je sa ciljem pronalaženja osoba nestalih u poplavama koje su zadesile Srbiju i
+        region u proteklim danima. Kako situacija postaje sve alarmantnija, da bismo što efikasnije reagovali i
+        pomogli građanima u najkraćem roku, molimo Vas da nam pomognete i priključite se akciji pretrage za nestalim licima.</p>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+    <p>
+        To možete uraditi tako što ćete podeliti stranicu sa svojim prijateljima, na društvenim mrežama, kao i upisati imena
+        osoba koje se još uvek vode kao nestale.
+    </p>
+    <form action="">
+        <input type="text" class="form-control"/>
+    </form>
+</div>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div>
+    <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+</div>
