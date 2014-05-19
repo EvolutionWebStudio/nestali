@@ -106,4 +106,28 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	public function actionPrijava()
+	{
+		$model = new Profile();
+		$this->render('contact',array('model'=>$model));
+	}
+
+	public function actionPronadjeni()
+	{
+		$model = Profile::model()->findAll();
+		$this->render('contact',array('model'=>$model));
+	}
+
+	public function actionNisu_pronadjeni()
+	{
+		$model = Profile::model()->findAll();
+		$this->render('contact',array('model'=>$model));
+	}
+
+	public function actionInformaije()
+	{
+		$model = Page::model()->findAll();
+		$this->render('contact',array('model'=>$model));
+	}
 }
