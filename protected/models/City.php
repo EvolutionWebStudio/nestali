@@ -94,4 +94,9 @@ class City extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public static function getCityName($id)
+	{
+		return City::model()->findByPK($id)->name;
+	}
 }

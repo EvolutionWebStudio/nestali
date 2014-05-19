@@ -29,7 +29,10 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$model = Profile::model()->findAllByAttributes(array('is_missing' => true));
+		$this->render('index',array(
+			'model' => $model,
+		));
 	}
 
 	/**
@@ -110,24 +113,24 @@ class SiteController extends Controller
 	public function actionPrijava()
 	{
 		$model = new Profile();
-		$this->render('contact',array('model'=>$model));
+		$this->render('index',array('model'=>$model));
 	}
 
 	public function actionPronadjeni()
 	{
-		$model = Profile::model()->findAll();
-		$this->render('contact',array('model'=>$model));
+		$model = Profile::model()->findAllByAttributes(array('is_missing' => false));
+		$this->render('index',array('model'=>$model));
 	}
 
 	public function actionNisu_pronadjeni()
 	{
-		$model = Profile::model()->findAll();
-		$this->render('contact',array('model'=>$model));
+		$model = Profile::model()->findAllByAttributes(array('is_missing' => true));
+		$this->render('index',array('model'=>$model));
 	}
 
-	public function actionInformaije()
+	public function actionInformacije()
 	{
 		$model = Page::model()->findAll();
-		$this->render('contact',array('model'=>$model));
+		$this->render('index',array('model'=>$model));
 	}
 }
