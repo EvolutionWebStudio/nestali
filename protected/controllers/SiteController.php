@@ -139,19 +139,34 @@ class SiteController extends Controller
 	public function actionPronadjeni()
 	{
 		$model = Profile::model()->findAllByAttributes(array('is_missing' => false));
-		$this->render('index',array('model'=>$model));
+		$this->render('pronadjeni',array('model'=>$model));
 	}
 
 	public function actionNisu_pronadjeni()
 	{
 		$model = Profile::model()->findAllByAttributes(array('is_missing' => true));
-		$this->render('index',array('model'=>$model));
+		$this->render('nisu_pronadjeni',array('model'=>$model));
 	}
 
 	public function actionInformacije()
 	{
 		$model = Page::model()->findAll();
 		$this->render('index',array('model'=>$model));
+	}
+
+	public function actionPretraga()
+	{
+		if(isset($_POST['pretraga']))
+		{
+			$pretraga = $_POST['pretraga'];
+			$model = Profile::model()->findAll(array(
+				'condition' => 'name_surname LIKE :match',
+				'params'    => array(':match' => "%$pretraga%")));
+			$this->render('pretraga',array('model'=>$model));
+		}
+		else{
+			$this->redirect(array('index'));
+		}
 	}
 
 	public function actionAdmin()

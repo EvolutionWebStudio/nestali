@@ -17,9 +17,9 @@ $this->pageTitle=Yii::app()->name;
             osoba koje se još uvijek vode kao nestale.
         </p>
         <div class="col-md-12">
-            <form action="">
+            <form action="<?php echo $this->createUrl('site/pretraga'); ?>" method="post">
                 <div class="input-group search-wrapper">
-                    <input type="text" class="form-control" placeholder="Upišite ime i prezime osobe koju tražite..."/>
+                    <input name="pretraga" type="text" class="form-control" placeholder="Upišite ime i prezime osobe koju tražite..."/>
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="submit">Pronađi</button>
                 </span>
