@@ -37,7 +37,7 @@ class Profile extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('contact_id, city_ptt', 'required'),
+			array('contact_id, city_ptt, name_surname', 'required'),
 			array('is_missing, contact_id, city_ptt', 'numerical', 'integerOnly'=>true),
 			array('name_surname, last_seen_destination', 'length', 'max'=>120),
 			array('description, image', 'length', 'max'=>255),
@@ -71,12 +71,12 @@ class Profile extends CActiveRecord
 			'name_surname' => 'Ime i Prezime',
 			'description' => 'Dodatne informacije',
 			'published_date' => 'Datum objave',
-			'last_seen_date' => 'Datum kad je zadnji put vidjen',
+			'last_seen_date' => 'Datum',
 			'is_missing' => 'Is Missing',
 			'image' => 'Slika',
-			'contact_id' => 'Contact',
+			'contact_id' => 'Kontakt',
 			'city_ptt' => 'Grad',
-			'last_seen_destination' => 'Lokacija na kojoj je zadnji put vidjen',
+			'last_seen_destination' => 'Poslednja poznata lokacija',
 		);
 	}
 
