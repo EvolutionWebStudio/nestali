@@ -20,5 +20,5 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <div>
-	    <?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
+    <?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
 </div>
