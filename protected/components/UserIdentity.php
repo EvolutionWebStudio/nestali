@@ -27,8 +27,7 @@ class UserIdentity extends CUserIdentity
 		else
 		{
 			Yii::app()->session['id'] = $user->id;
-			Yii::app()->session['level'] = $user->user_roll_id;
-			Yii::app()->session['fullname'] = $user->name_surname;
+			Yii::app()->session['fullname'] = $user->username;
 
 			$this->errorCode = self::ERROR_NONE;
 			return true;

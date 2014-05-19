@@ -68,15 +68,15 @@ class Profile extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name_surname' => 'Name Surname',
-			'description' => 'Description',
-			'published_date' => 'Published Date',
-			'last_seen_date' => 'Last Seen Date',
+			'name_surname' => 'Ime i Prezime',
+			'description' => 'Dodatne informacije',
+			'published_date' => 'Datum objave',
+			'last_seen_date' => 'Datum kad je zadnji put vidjen',
 			'is_missing' => 'Is Missing',
-			'image' => 'Image',
+			'image' => 'Slika',
 			'contact_id' => 'Contact',
-			'city_ptt' => 'City Ptt',
-			'last_seen_destination' => 'Last Seen Destination',
+			'city_ptt' => 'Grad',
+			'last_seen_destination' => 'Lokacija na kojoj je zadnji put vidjen',
 		);
 	}
 

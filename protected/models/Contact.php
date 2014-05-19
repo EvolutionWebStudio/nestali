@@ -57,7 +57,7 @@ class Contact extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Ime kontak osobe',
 			'email' => 'Email',
 			'phone' => 'Phone',
 		);

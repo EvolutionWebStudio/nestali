@@ -112,8 +112,26 @@ class SiteController extends Controller
 
 	public function actionPrijava()
 	{
-		$model = new Profile();
-		$this->render('index',array('model'=>$model));
+		$profileModel = new Profile();
+		$contactModel = new Contact();
+
+		if(isset($_POST['Contact']))
+		{
+			$contactModel->attributes=$_POST['Contact'];
+			if($contactModel->save() and isset($_POST['Profile']))
+			{
+				$profileModel->attributes=$_POST['Profile'];
+				$profileModel->contact_id = $contactModel->id;
+				$profileModel->is_missing = 1;
+				$profileModel->published_date = date("Y-m-d h:m:s");
+				if($profileModel->save())
+					$this->redirect(array('index'));
+			}
+		}
+
+
+
+		$this->render('prijava',array('profileModel'=>$profileModel, 'contactModel'=>$contactModel));
 	}
 
 	public function actionPronadjeni()
@@ -132,5 +150,10 @@ class SiteController extends Controller
 	{
 		$model = Page::model()->findAll();
 		$this->render('index',array('model'=>$model));
+	}
+
+	public function actionAdmin()
+	{
+		$this->redirect(array('profile/index'));
 	}
 }
