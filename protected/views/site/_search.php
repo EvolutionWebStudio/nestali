@@ -13,36 +13,36 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>120, 'class' => 'form-control')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'parent_name'); ?>
-		<?php echo $form->textField($model,'parent_name',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'parent_name',array('size'=>45,'maxlength'=>45, 'class' => 'form-control')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'sex'); ?>
-		<?php echo $form->textField($model,'sex',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'sex',array('size'=>45,'maxlength'=>45, 'class' => 'form-control')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'birthday'); ?>
-		<?php echo $form->textField($model,'birthday'); ?>
+		<?php echo $form->textField($model,'birthday', array('class' => 'form-control')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'hometown'); ?>
-		<?php echo $form->textField($model,'hometown',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'hometown',array('size'=>45,'maxlength'=>45, 'class' => 'form-control')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'location'); ?>
-		<?php echo $form->textField($model,'location',array('size'=>60,'maxlength'=>140)); ?>
+		<?php echo $form->textField($model,'location',array('size'=>60,'maxlength'=>140, 'class' => 'form-control')); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Pretrazi'); ?>
+		<?php echo CHtml::submitButton('Pretraži', array('class' => 'btn btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
