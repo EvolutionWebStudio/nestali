@@ -124,8 +124,13 @@ class SiteController extends Controller
 				$profileModel->contact_id = $contactModel->id;
 				$profileModel->is_missing = 1;
 				$profileModel->published_date = date("Y-m-d h:m:s");
-				$profileModel->image = CUploadedFile::getInstance($profileModel,'image');
-				$profileModel->image->saveAs(Yii::app()->basePath . '/img/'.$profileModel->image);
+				$picture_file = CUploadedFile::getInstanceByName('photo');
+				if($picture_file)
+				{
+					$picture_name = $picture_file->name;
+					$picture_file->SaveAs(Yii::getPathOfAlias('webroot').'/img/'. $picture_name);
+				}
+			    $profileModel->image = $picture_name;
 				if($profileModel->save())
 					$this->redirect(array('index'));
 			}
@@ -152,6 +157,12 @@ class SiteController extends Controller
 	{
 		$model = Page::model()->findAll();
 		$this->render('index',array('model'=>$model));
+	}
+
+	public function actionEvakuisani()
+	{
+		$model = Evacuees::model()->findAll();
+		$this->render('evakuisani',array('model'=>$model));
 	}
 
 	public function actionPretraga()
