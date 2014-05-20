@@ -101,6 +101,11 @@ textarea {
 .form-control {
     margin-bottom: .5rem;
 }
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
 body {
     padding-top: 70px;
     background: url('../img/square_bg.png');
@@ -108,13 +113,13 @@ body {
 }
 .navbar-brand {
     color: #428BCA!important;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 /* Pocetna */
 
 .main-cta-wrapper {
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 1rem 2rem;
     margin-bottom: 2rem;
     background: #ff7640;
     border-radius: 5px;
@@ -293,8 +298,30 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 15em) {
     /* Style adjustments for viewports that meet the condition */
+
+}
+
+@media(max-width:767px){
+    .navbar-brand {
+        font-size: 1.3em;
+    }
+}
+@media(min-width:768px){
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+}
+@media(min-width:992px){
+    .navbar-brand {
+        font-size: 1.3em;
+    }
+}
+@media(min-width:1200px){
+    .navbar-brand {
+        font-size: 1.5em;
+    }
 }
 
 @media print,

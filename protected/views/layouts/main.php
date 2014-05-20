@@ -23,7 +23,6 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <div class="container">
-
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -50,12 +49,10 @@
         </div>
     </nav>
 
-    <div class="">
-        <?php echo $content; ?>
-    </div>
+    <?php echo $content; ?>
 
     <div class="row">
-        <footer class="col-md-12">
+        <footer class="col-xs-12">
             <p class="copyright text-center">Created by <a href="http://evolution.rs.ba" target="_blank">Evolution Web Studio</a> &copy;2014</p>
         </footer>
     </div>

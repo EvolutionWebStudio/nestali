@@ -5,7 +5,7 @@ $this->pageTitle = '';
 ?>
 
 <div class="row">
-    <div class="main-cta-wrapper col-md-12">
+    <div class="main-cta-wrapper col-xs-12">
         <h1>Pronađimo nestale!</h1>
         <p>Ovaj registar napravljen je sa ciljem pronalaženja osoba sa područja Republike Srpske, nestalih u poplavama
             koje su zadesile region u proteklom periodu. Kako situacija postaje sve alarmantnija, da bismo što efikasnije reagovali i

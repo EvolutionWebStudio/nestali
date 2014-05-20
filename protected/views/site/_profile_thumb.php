@@ -1,7 +1,7 @@
 
 <?php foreach($model as $m): ?>
 
-<div class="col-md-3 person-wrapper">
+<div class="col-xs-12 col-sm-6 col-md-3 person-wrapper">
 	<article class="thumbnail person">
         <?php $imageName = ($m->image)? $m->image : 'person-placeholder-male.jpg'; ?>
 		<img src="<?php echo Yii::app()->baseUrl.'/img/'. $imageName; ?>" alt="<?php echo 'Slika ' . $m->name_surname; ?>">
