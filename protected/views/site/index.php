@@ -1,7 +1,7 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = '';
 ?>
 
 <div class="row">
@@ -18,7 +18,7 @@ $this->pageTitle=Yii::app()->name;
         <div class="col-md-12">
             <form action="<?php echo $this->createUrl('site/pretraga'); ?>" method="post">
                 <div class="input-group search-wrapper">
-                    <input name="pretraga" type="text" class="form-control" placeholder="Upišite ime i prezime osobe koju tražite..."/>
+                    <input name="pretraga" type="text" class="form-control" placeholder="Upišite ime i prezime osobe koju tražite..." autofocus>
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="submit">Pronađi</button>
                 </span>

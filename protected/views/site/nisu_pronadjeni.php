@@ -1,7 +1,7 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle='Osobe koje još nisu pronađene';
 ?>
 
 <div class="row">

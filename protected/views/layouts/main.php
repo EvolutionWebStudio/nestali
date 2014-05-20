@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nestali | Baza nestalih lica u Republici Srpskoj</title>
+    <title><?php echo ($this->pageTitle)? $this->pageTitle.' | ' : ""; echo Yii::app()->name; ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -50,7 +50,7 @@
         </div>
     </nav>
 
-    <div class="row">
+    <div class="">
         <?php echo $content; ?>
     </div>
 

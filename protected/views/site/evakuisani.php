@@ -1,6 +1,8 @@
 <?php
 /* @var $this EvacueesController */
 /* @var $model Evacuees */
+$this->pageTitle = 'Lista evakuisanih osoba';
+
 $cs=Yii::app()->clientScript;
 $cs->scriptMap=array(
 	'jquery.js'=>false,
@@ -20,12 +22,12 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Evakuisani</h1>
+<h1>Lista evakuisanih osoba</h1>
 <?php if(!Yii::app()->user->isGuest): ?>
-<?php echo CHtml::link('Dodaj evakuisanog',array('evacuees/create')); ?>
+<?php echo CHtml::link('Dodaj evakuisanu osobu',array('evacuees/create')); ?>
 <?php endif; ?>
 
-<?php echo CHtml::link('Pretrazi evakuisane','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pretraži evakuisane','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 		'model'=>$model,
