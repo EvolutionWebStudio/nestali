@@ -32,6 +32,7 @@ class Contact extends CActiveRecord
 		return array(
 			array('name, phone', 'length', 'max'=>45),
 			array('email', 'length', 'max'=>120),
+            array('name, phone', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, email, phone', 'safe', 'on'=>'search'),
@@ -57,9 +58,9 @@ class Contact extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Ime kontak osobe',
-			'email' => 'Email',
-			'phone' => 'Phone',
+			'name' => 'Ime kontakt osobe',
+			'email' => 'Email adresa',
+			'phone' => 'Broj telefona',
 		);
 	}
 
