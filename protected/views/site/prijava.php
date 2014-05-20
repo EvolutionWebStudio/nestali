@@ -7,25 +7,24 @@ $this->pageTitle = 'Prijava nestale osobe';
 
 <h1>Prijavite nestalu osobu</h1>
 
-
-    <p>Poštovani,</p>
     <p>
         U cilju brzog pronalaženja i evidentiranja nestalih osoba, napravljena je ova stranica,
         kako bismo u što kraćem roku izašli u susret svima koji brinu za svoje najbliže.
-        Neophodno je da popunite sva dole navedena polja sa što preciznijim podacima na sledeći način:
+        Neophodno je da popunite sva dole navedena polja sa što preciznijim podacima.
     </p>
 
-    <p>
-        Upišite ime i prezime nestale osobe.
-        Upišite grad iz kog nestala osoba dolazi.
-        U polje „Poslednja poznata lokacija“ upišite lokaciju na kojoj je osoba poslednji put viđena
-        ili sa koje vas je poslednji put kontaktirala.
-        U polje datum upišite datum kada Vas je nestala osoba poslednji put kontaktirala.
-        U polju „Dodatne informacije“  upišite sve relevantne podatke npr. datum ili godina rođenja, koje će nadležnim organima pomoći u potrazi nestalih lica.
-        U poljima „Kontakt osoba“ i „Telefon“ upišite ime i prezime kao i broj telefona osobe koju ćemo kontaktirati u slučaju bilo kakvih informacija o nestalom licu.
-        Kada završite sa unošenjem neophodnih podataka, kliknite na „Prijavi nestalu osobu“.
-    </p>
-
+    <ul>
+        <li>Upišite ime i prezime nestale osobe.</li>
+        <li>Upišite grad iz kog nestala osoba dolazi.</li>
+        <li>Upišite lokaciju na kojoj je osoba poslednji put viđena ili sa koje vas je poslednji put kontaktirala.</li>
+        <li>Upišite datum kada Vas je nestala osoba poslednji put kontaktirala.</li>
+        <li>Upišite sve dodatne informacije koje bi mogle pomoći pri pronalaženju osobe (datum ili godina rođenja, fizičke karakteristike ili bilo koja druga korisna informacija)</li>
+        <li>Dodajte sliku nestale osobe da bi ste olakšali prepoznavanje i pronalazak</li>
+        <li>Upišite podatke osobe koju treba kontaktirati u slučaju bilo kakvih informacija o nestaloj osobi</li>
+    </ul>
+<p>
+    Nakon što popunite sve potrebne podatke kliknite na "Prijavi nestalu osobu" da bi ste te podatke upisali u bazu nestalih osoba.
+</p>
 <div class="form form-prijava">
 
 	<?php $form=$this->beginWidget('CActiveForm', array(

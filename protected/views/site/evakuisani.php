@@ -27,8 +27,7 @@ $('.search-form form').submit(function(){
 <?php echo CHtml::link('Dodaj evakuisanu osobu',array('evacuees/create')); ?>
 <?php endif; ?>
 
-<?php echo CHtml::link('Pretraži evakuisane','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
+<div class="search-form">
 	<?php $this->renderPartial('_search',array(
 		'model'=>$model,
 	)); ?>
@@ -37,8 +36,8 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'evacuees-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'summaryText'=>'{start} od {end} rezultata ( {page} stranica)',
+    'emptyText'=>'Nije pronađena ni jedna osoba',
 	'columns'=>array(
 		'name',
 		'parent_name',

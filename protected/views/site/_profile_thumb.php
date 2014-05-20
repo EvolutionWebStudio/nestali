@@ -1,11 +1,5 @@
-<?php if(!$model): ?>
-    <div class="col-md-12 text-center">
-        <p>Nema rezultata</p>
-    </div>
-<?php
-    else:
-    foreach($model as $m):
-?>
+
+<?php foreach($model as $m): ?>
 
 <div class="col-md-3 person-wrapper">
 	<article class="thumbnail person">
@@ -13,7 +7,7 @@
 		<img src="<?php echo Yii::app()->baseUrl.'/img/'. $imageName; ?>" alt="<?php echo 'Slika ' . $m->name_surname; ?>">
 
         <div class="caption">
-			<h3><?php echo $m->name_surname; ?></h3>
+			<h2><?php echo $m->name_surname; ?></h2>
             <p class="person-description">
                 <?php echo $m->description; ?>
             </p>
@@ -44,7 +38,4 @@
 	</article>
 </div>
 
-<?php
-    endforeach;
-    endif;
-?>
+<?php endforeach; ?>

@@ -98,7 +98,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.form-control {
+    margin-bottom: .5rem;
+}
 body {
     padding-top: 70px;
     background: url('../img/square_bg.png');
@@ -173,6 +175,10 @@ body {
 
 #photoCover {
     z-index: 0;
+}
+
+.search-footer {
+    margin: 1rem 0;
 }
 
 footer {

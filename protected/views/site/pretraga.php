@@ -20,6 +20,19 @@ $this->pageTitle='Rezultati pretrage';
 	</div>
 </div>
 
-<div class="row" id="people-wrapper">
-	<?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
-</div>
+
+<?php if(!$model): ?>
+    <div class="row">
+        <?php $this->renderPartial('_footer_pretrage', array('isEmpty' => true)); ?>
+    </div>
+<?php else: ?>
+    <div class="row" id="people-wrapper">
+        <?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
+    </div>
+    <div class="row">
+        <?php $this->renderPartial('_footer_pretrage', array('isEmpty' => false)); ?>
+    </div>
+<?php endif; ?>
+
+
+
