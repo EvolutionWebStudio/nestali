@@ -189,6 +189,6 @@ class SiteController extends Controller
 
 	public function actionAdmin()
 	{
-		$this->redirect(array('index'));
+		$this->redirect(array('login'));
 	}
 }
