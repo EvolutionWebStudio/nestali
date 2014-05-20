@@ -9,17 +9,19 @@
 
     <p>Poštovani,</p>
     <p>
-        U cilju brzog pronalaženja i evidentiranja nestalih osoba, napravljena je ova stranica, kako bismo u što kraćem roku izašli u susret svima koji brinu za svoje najbliže.
+        U cilju brzog pronalaženja i evidentiranja nestalih osoba, napravljena je ova stranica,
+        kako bismo u što kraćem roku izašli u susret svima koji brinu za svoje najbliže.
         Neophodno je da popunite sva dole navedena polja sa što preciznijim podacima na sledeći način:
     </p>
 
     <p>
         Upišite ime i prezime nestale osobe.
         Upišite grad iz kog nestala osoba dolazi.
-        U polje „Poslednja poznata lokacija“ upišite lokaciju na kojoj je osoba poslednji put viđena ili sa koje vas je poslednji put kontaktirala.
+        U polje „Poslednja poznata lokacija“ upišite lokaciju na kojoj je osoba poslednji put viđena
+        ili sa koje vas je poslednji put kontaktirala.
+        U polje datum upišite datum kada Vas je nestala osoba poslednji put kontaktirala.
         U polju „Dodatne informacije“  upišite sve relevantne podatke npr. datum ili godina rođenja, koje će nadležnim organima pomoći u potrazi nestalih lica.
         U poljima „Kontakt osoba“ i „Telefon“ upišite ime i prezime kao i broj telefona osobe koju ćemo kontaktirati u slučaju bilo kakvih informacija o nestalom licu.
-        Klikom na polje „SELECT FILES“ možete dodati i sliku nestalog lica. Bitno je da slika ne bude mnogo stara, te da se na istoj može prepoznati i jasno uočiti identitet osobe koju tražite.
         Kada završite sa unošenjem neophodnih podataka, kliknite na „Prijavi nestalu osobu“.
     </p>
 

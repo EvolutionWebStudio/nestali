@@ -1,4 +1,12 @@
-<?php foreach($model as $m): ?>
+<?php if(!$model): ?>
+    <div class="col-md-12 text-center">
+        <p>Nema rezultata</p>
+    </div>
+<?php
+    else:
+    foreach($model as $m):
+?>
+
 <div class="col-md-3 person-wrapper">
 	<article class="thumbnail person">
         <?php $imageName = ($m->image)? $m->image : 'person-placeholder-male.jpg'; ?>
@@ -13,7 +21,7 @@
                 <li title="Zadnji put viđen/a"><span class="glyphicon glyphicon-calendar"></span> <?php echo date('d.m.Y', strtotime($m->last_seen_date)); ?></li>
                 <li title="Grad u kome je osoba nestala"><span class="glyphicon glyphicon-record"></span> <?php echo City::model()->getCityName($m->city_ptt); ?></li>
                 <li title="Poslednja poznata lokacija"><span class="glyphicon glyphicon-map-marker"></span>  <?php echo $m->last_seen_destination; ?></li>
-                <li title="Kontakt osoba"><span class="glyphicon glyphicon-earphone"></span> <?php echo $m->contact->name . ', ' . $m->contact->phone; ?></li>
+                <li title="Kontakt osoba"><span class="glyphicon glyphicon-earphone"></span> <?php echo $m->contact->name . ', ' . $m->contact->phone; echo ($m->contact->email)? ', ' . $m->contact->email:""; ?></li>
                 <li></li>
             </ul>
 			<?php if($m->is_missing): ?>
@@ -35,4 +43,8 @@
 		</div>
 	</article>
 </div>
-<?php endforeach; ?>
+
+<?php
+    endforeach;
+    endif;
+?>

@@ -179,7 +179,7 @@ class SiteController extends Controller
 			$model = Profile::model()->findAll(array(
 				'condition' => 'name_surname LIKE :match',
 				'params'    => array(':match' => "%$pretraga%")));
-			$this->render('pretraga',array('model'=>$model));
+			$this->render('pretraga',array('model'=>$model, 'searchTerm'=>$pretraga));
 		}
 		else{
 			$this->redirect(array('index'));
