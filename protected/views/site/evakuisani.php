@@ -1,7 +1,10 @@
 <?php
 /* @var $this EvacueesController */
 /* @var $model Evacuees */
-
+$cs=Yii::app()->clientScript;
+$cs->scriptMap=array(
+	'jquery.js'=>false,
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -22,7 +25,7 @@ $('.search-form form').submit(function(){
 <?php echo CHtml::link('Dodaj evakuisanog',array('evacuees/create')); ?>
 <?php endif; ?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pretrazi evakuisane','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 		'model'=>$model,
@@ -33,7 +36,7 @@ $('.search-form form').submit(function(){
 	'id'=>'evacuees-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
-	'summaryText'=>'{start}-{end} od {page} rezultata',
+	'summaryText'=>'{start} od {end} rezultata ( {page} stranica)',
 	'columns'=>array(
 		'name',
 		'parent_name',
