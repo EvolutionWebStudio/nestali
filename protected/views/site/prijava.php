@@ -2,6 +2,7 @@
 /* @var $this ProfileController */
 /* @var $model Profile */
 /* @var $form CActiveForm */
+$this->pageTitle = 'Prijava nestale osobe';
 ?>
 
 <h1>Prijavite nestalu osobu</h1>
