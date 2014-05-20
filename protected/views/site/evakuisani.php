@@ -22,10 +22,10 @@ $('.search-form form').submit(function(){
 
 <h1>Evakuisani</h1>
 <?php if(!Yii::app()->user->isGuest): ?>
-<?php echo CHtml::link('Dodaj evakuisanog',array('evacuees/create')); ?>
+<?php echo CHtml::link('Dodaj evakuisanog',array('evacuees/create'),array('class'=>'btn btn-primary')); ?>
 <?php endif; ?>
 
-<?php echo CHtml::link('Pretrazi evakuisane','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pretrazi evakuisane','#',array('class'=>'btn btn-default search-button')); ?>
 <div class="search-form" style="display:none">
 	<?php $this->renderPartial('_search',array(
 		'model'=>$model,
