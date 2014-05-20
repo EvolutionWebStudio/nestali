@@ -58,12 +58,12 @@ class Evacuees extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'parent_name' => 'Parent Name',
-			'sex' => 'Sex',
-			'birthday' => 'Birthday',
-			'hometown' => 'Hometown',
-			'location' => 'Location',
+			'name' => 'Ime i prezime',
+			'parent_name' => 'Ime jednog roditelja',
+			'sex' => 'Pol',
+			'birthday' => 'Datum rođenja',
+			'hometown' => 'Mjesto rođenja',
+			'location' => 'Trenutna lokacija',
 		);
 	}
 

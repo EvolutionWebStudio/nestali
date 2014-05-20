@@ -161,8 +161,14 @@ class SiteController extends Controller
 
 	public function actionEvakuisani()
 	{
-		$model = Evacuees::model()->findAll();
-		$this->render('evakuisani',array('model'=>$model));
+		$model=new Evacuees('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Evacuees']))
+			$model->attributes=$_GET['Evacuees'];
+
+		$this->render('evakuisani',array(
+			'model'=>$model,
+		));
 	}
 
 	public function actionPretraga()
