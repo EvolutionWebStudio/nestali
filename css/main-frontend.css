@@ -169,6 +169,10 @@ body {
         margin: 1.5rem 0;
     }
 
+#photoCover {
+    z-index: 0;
+}
+
 footer {
     padding-top: 2rem;
     font-size: .8rem;

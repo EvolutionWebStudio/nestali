@@ -63,10 +63,12 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo Yii::app()->baseUrl; ?>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/masonry.pkgd.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/plugins.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/main.js"></script>
+
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

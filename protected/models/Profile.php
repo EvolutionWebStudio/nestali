@@ -37,7 +37,7 @@ class Profile extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('contact_id, city_ptt, name_surname', 'required'),
+			array('contact_id, city_ptt, name_surname, last_seen_date, last_seen_destination', 'required'),
 			array('is_missing, contact_id, city_ptt', 'numerical', 'integerOnly'=>true),
 			array('name_surname, last_seen_destination', 'length', 'max'=>120),
 			array('description', 'length', 'max'=>255),

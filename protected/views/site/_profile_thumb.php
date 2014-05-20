@@ -10,7 +10,7 @@
                 <?php echo $m->description; ?>
             </p>
             <ul class="person-info">
-                <li title="Zadnji put viđen/a"><span class="glyphicon glyphicon-calendar"></span> <?php echo date('d.m.Y, h:m', strtotime($m->last_seen_date)); ?></li>
+                <li title="Zadnji put viđen/a"><span class="glyphicon glyphicon-calendar"></span> <?php echo date('d.m.Y', strtotime($m->last_seen_date)); ?></li>
                 <li title="Grad u kome je osoba nestala"><span class="glyphicon glyphicon-record"></span> <?php echo City::model()->getCityName($m->city_ptt); ?></li>
                 <li title="Poslednja poznata lokacija"><span class="glyphicon glyphicon-map-marker"></span>  <?php echo $m->last_seen_destination; ?></li>
                 <li title="Kontakt osoba"><span class="glyphicon glyphicon-earphone"></span> <?php echo $m->contact->name . ', ' . $m->contact->phone; ?></li>

@@ -44,7 +44,7 @@
 
 	<div class="col-md-3">
 		<?php echo $form->labelEx($profileModel,'name_surname'); ?>
-		<?php echo $form->textField($profileModel,'name_surname',array('size'=>60,'maxlength'=>120, 'class'=>'form-control', 'placeholder'=> 'Ime i prezime nestale osobe')); ?>
+		<?php echo $form->textField($profileModel,'name_surname',array('size'=>60,'maxlength'=>120, 'class'=>'form-control', 'placeholder'=> 'Ime i prezime nestale osobe', 'required' => true)); ?>
 		<?php echo $form->error($profileModel,'name_surname'); ?>
 	</div>
 
@@ -59,7 +59,7 @@
 
     <div class="col-md-5">
         <?php echo $form->labelEx($profileModel,'last_seen_destination'); ?>
-        <?php echo $form->textField($profileModel,'last_seen_destination',array('size'=>60,'maxlength'=>120, 'class'=>'form-control', 'placeholder'=> 'Poslednja poznata lokacija (do 120 karaktera)')); ?>
+        <?php echo $form->textField($profileModel,'last_seen_destination',array('size'=>60,'maxlength'=>120, 'class'=>'form-control', 'placeholder'=> 'Poslednja poznata lokacija (do 120 karaktera)', 'required' => true)); ?>
         <?php echo $form->error($profileModel,'last_seen_destination'); ?>
     </div>
 
@@ -96,7 +96,14 @@
 	</div>
     <div class="col-md-4">
         <?php echo $form->labelEx($profileModel,'image'); ?>
-        <?php echo CHtml::fileField('photo','');  ?>
+        <?php echo CHtml::fileField('photo','', array('class' => 'form-control', 'id' => 'image-input', 'style' => 'display:none'));  ?>
+            <div class="input-append input-group">
+                <input id="photoCover" class="form-control" type="text" name="file">
+                <span class="input-group-btn">
+                    <a class="btn btn-default" onclick="$('input[id=image-input]').click();">Pronađi</a>
+                </span>
+            </div>
+
         <?php echo $form->error($profileModel,'image'); ?>
     </div>
     <div class="col-md-12">
@@ -104,7 +111,7 @@
     </div>
 	<div class="col-md-4">
 		<?php echo $form->labelEx($contactModel,'name'); ?>
-		<?php echo $form->textField($contactModel,'name',array('size'=>45,'maxlength'=>45, 'class'=>'form-control', 'placeholder'=> 'Unesite ime kontakt osobe')); ?>
+		<?php echo $form->textField($contactModel,'name',array('size'=>45,'maxlength'=>45, 'class'=>'form-control', 'placeholder'=> 'Unesite ime kontakt osobe', 'required' => true)); ?>
 		<?php echo $form->error($contactModel,'name'); ?>
 	</div>
 
@@ -116,7 +123,7 @@
 
 	<div class="col-md-4">
 		<?php echo $form->labelEx($contactModel,'phone'); ?>
-		<?php echo $form->textField($contactModel,'phone',array('size'=>45,'maxlength'=>45, 'class'=>'form-control', 'placeholder'=> 'Kontakt telefon')); ?>
+		<?php echo $form->textField($contactModel,'phone',array('size'=>45,'maxlength'=>45, 'class'=>'form-control', 'placeholder'=> 'Kontakt telefon', 'required' => true)); ?>
 		<?php echo $form->error($contactModel,'phone'); ?>
 	</div>
 

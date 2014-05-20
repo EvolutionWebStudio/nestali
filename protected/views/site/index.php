@@ -29,6 +29,6 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 
-<div>
+<div id="thumbs-wrapper" class="container">
     <?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
 </div>
