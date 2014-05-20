@@ -32,12 +32,8 @@ class ProfileController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','create','update','pronadjena'),
+				'actions'=>array('index','create','update','pronadjena','delete','admin','obrisi'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -112,7 +108,7 @@ class ProfileController extends Controller
 	{
 		$this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		 //if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
@@ -176,6 +172,16 @@ class ProfileController extends Controller
 		$model = $this->loadModel($id);
 		$model->is_missing = 0;
 		$model->save();
-		$this->redirect(array('site/index'));
+		$this->redirect(array('/pronadjeni'));
+	}
+
+	public function actionObrisi($id)
+	{
+		$model = $this->loadModel($id);
+		$model->is_deleted = 1;
+		if($model->update())
+		{
+			$this->redirect(array('/index'));
+		}
 	}
 }

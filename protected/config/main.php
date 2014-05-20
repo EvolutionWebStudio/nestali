@@ -42,7 +42,7 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-				'<action:(prijava|pronadjeni|nisu_pronadjeni|evakuisani|pretraga|index)>' => 'site/<action>',
+				'<action:(prijava|pronadjeni|nisu_pronadjeni|evakuisani|pretraga|index|admin|login|logout)>' => 'site/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

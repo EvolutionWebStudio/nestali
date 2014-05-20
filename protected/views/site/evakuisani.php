@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 
 <h1>Lista evakuisanih osoba</h1>
 <?php if(!Yii::app()->user->isGuest): ?>
-<?php echo CHtml::link('Dodaj evakuisanu osobu',array('evacuees/create')); ?>
+<?php echo CHtml::link('Dodaj evakuisanu osobu',array('evacuees/create'),array('class'=>'btn btn-primary')); ?>
 <?php endif; ?>
 
 <div class="search-form">

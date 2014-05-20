@@ -144,13 +144,13 @@ class SiteController extends Controller
 
 	public function actionPronadjeni()
 	{
-		$model = Profile::model()->findAllByAttributes(array('is_missing' => false));
+		$model = Profile::model()->findAllByAttributes(array('is_missing' => false, 'is_deleted'=> NULL));
 		$this->render('pronadjeni',array('model'=>$model));
 	}
 
 	public function actionNisu_pronadjeni()
 	{
-		$model = Profile::model()->findAllByAttributes(array('is_missing' => true));
+		$model = Profile::model()->findAllByAttributes(array('is_missing' => true, 'is_deleted'=> NULL));
 		$this->render('nisu_pronadjeni',array('model'=>$model));
 	}
 
@@ -178,7 +178,7 @@ class SiteController extends Controller
 		{
 			$pretraga = $_POST['pretraga'];
 			$model = Profile::model()->findAll(array(
-				'condition' => 'name_surname LIKE :match',
+				'condition' => 'name_surname LIKE :match AND is_deleted is NULL',
 				'params'    => array(':match' => "%$pretraga%")));
 			$this->render('pretraga',array('model'=>$model, 'searchTerm'=>$pretraga));
 		}
@@ -189,6 +189,6 @@ class SiteController extends Controller
 
 	public function actionAdmin()
 	{
-		$this->redirect(array('index'));
+		$this->redirect(array('login'));
 	}
 }
