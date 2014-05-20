@@ -13,6 +13,7 @@
  * @property string $image
  * @property integer $contact_id
  * @property integer $city_ptt
+ * @property integer $is_deleted
  * @property string $last_seen_destination
  *
  * The followings are the available model relations:
@@ -38,7 +39,7 @@ class Profile extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('contact_id, city_ptt, name_surname, last_seen_date, last_seen_destination', 'required'),
-			array('is_missing, contact_id, city_ptt', 'numerical', 'integerOnly'=>true),
+			array('is_missing, contact_id, city_ptt, is_deleted', 'numerical', 'integerOnly'=>true),
 			array('name_surname, last_seen_destination', 'length', 'max'=>120),
 			array('description', 'length', 'max'=>255),
 			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true, 'message'=>Yii::t('common', 'form.field.email')),
@@ -46,7 +47,7 @@ class Profile extends CActiveRecord
 			array('published_date, last_seen_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name_surname, description, published_date, last_seen_date, is_missing, image, contact_id, city_ptt, last_seen_destination', 'safe', 'on'=>'search'),
+			array('id, name_surname, is_deleted, description, published_date, last_seen_date, is_missing, image, contact_id, city_ptt, last_seen_destination', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -109,6 +110,7 @@ class Profile extends CActiveRecord
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('contact_id',$this->contact_id);
 		$criteria->compare('city_ptt',$this->city_ptt);
+		$criteria->compare('is_deleted',$this->is_deleted);
 		$criteria->compare('last_seen_destination',$this->last_seen_destination,true);
 
 		return new CActiveDataProvider($this, array(

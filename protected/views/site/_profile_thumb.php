@@ -29,9 +29,11 @@
                 <span class="glyphicon glyphicon-exclamation-sign"></span> Nije još pronađen/a
 			</div>
 			<?php if(!Yii::app()->user->isGuest): ?>
-				<div class="alert alert-warning">
-					<?php echo CHtml::link('Pronađen/a',array('profile/pronadjena','id'=>$m->id)); ?>
-				</div>
+				<div class="btn-group text-center col-md-12">
+					<?php echo CHtml::link('Pronađen/a',array('profile/pronadjena','id'=>$m->id),array('class'=>'btn btn-success col-md-6','title'=>'Označi da je osoba pronađena')); ?>
+
+						<?php echo CHtml::link('Obriši',array('profile/obrisi','id'=>$m->id),array('class'=>'btn btn-danger col-md-6','title'=>'Obriši prijavu')); ?>
+					</div>
 			<?php endif; ?>
 	        <?php else: ?>
 				<div class="alert alert-success">
