@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<div class="">
+<div class="row">
     <div class="main-cta-wrapper col-md-12">
         <h1>Pronađimo nestale!</h1>
         <p>Ovaj registar napravljen je sa ciljem pronalaženja osoba sa područja Republike Srpske, nestalih u poplavama
@@ -29,6 +29,6 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 
-<div id="thumbs-wrapper" class="container">
+<div id="people-wrapper" class="row">
     <?php $this->renderPartial('_profile_thumb', array('model'=>$model)); ?>
 </div>

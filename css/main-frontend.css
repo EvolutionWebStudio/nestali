@@ -129,7 +129,9 @@ body {
         border: 10px solid rgba(255,155,115, 1);
         border-radius: 5px;
     }
-
+#people-wrapper {
+    margin: 0 -30px;
+}
 .person .alert {
     padding: .5rem 1rem;
     margin-bottom: .3rem;
