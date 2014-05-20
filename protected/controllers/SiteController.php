@@ -124,6 +124,7 @@ class SiteController extends Controller
 				$profileModel->contact_id = $contactModel->id;
 				$profileModel->is_missing = 1;
 				$profileModel->published_date = date("Y-m-d h:m:s");
+				$profileModel->last_seen_date = date("Y-m-d h:m:s",strtotime($profileModel->last_seen_date));
 				$picture_file = CUploadedFile::getInstanceByName('photo');
 				if($picture_file)
 				{
