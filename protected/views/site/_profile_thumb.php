@@ -1,7 +1,7 @@
 <?php foreach($model as $m): ?>
 <div class="col-sm-6 col-md-3">
 	<div class="thumbnail person">
-        <?php $imageName = (file_exists(Yii::app()->baseUrl.'/img/'.$m->image))? $m->image : 'person-placeholder-male.jpg'; ?>
+        <?php $imageName = ($m->image)? $m->image : 'person-placeholder-male.jpg'; ?>
 		<img src="<?php echo Yii::app()->baseUrl.'/img/'. $imageName; ?>" alt="<?php echo 'Slika ' . $m->name_surname; ?>">
 
         <div class="caption">

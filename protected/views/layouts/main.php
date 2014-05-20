@@ -42,8 +42,9 @@
                         array('label'=>'Prijavite nestalu osobu', 'url'=>array('/site/prijava')),
                         array('label'=>'Pronađeni', 'url'=>array('/site/pronadjeni')),
                         array('label'=>'Nisu pronađeni', 'url'=>array('/site/nisu_pronadjeni')),
-                        array('label'=>'Informacije', 'url'=>array('/site/informacije')),
+                        array('label'=>'Evakuisani', 'url'=>array('/site/evakuisani')),
 	                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+	                    array('label'=>'Dodaj evakuisane', 'url'=>array('/evacuees/create'), 'visible'=>!Yii::app()->user->isGuest),
                         ),
                 )); ?>
             </div>

@@ -96,7 +96,7 @@
 	</div>
     <div class="col-md-4">
         <?php echo $form->labelEx($profileModel,'image'); ?>
-        <?php echo $form->textField($profileModel,'image',array('size'=>60,'maxlength'=>255, 'class'=>'form-control')); ?>
+        <?php echo CHtml::fileField('photo','');  ?>
         <?php echo $form->error($profileModel,'image'); ?>
     </div>
     <div class="col-md-12">
